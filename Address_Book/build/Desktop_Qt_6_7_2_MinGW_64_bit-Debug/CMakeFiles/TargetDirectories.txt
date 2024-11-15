@@ -1,0 +1,9 @@
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/Address_Book.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/Address_Book_autogen_timestamp_deps.dir
+C:/Users/KJ/Desktop/Address_Book/Address_Book/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/Address_Book_autogen.dir
