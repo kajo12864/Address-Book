@@ -12,7 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
     menuinfo = "TEST PROFILE \n 555-1234-5678";
     QListWidgetItem *item = new QListWidgetItem(QIcon(":/images/images/test_profile.png"), menuinfo);
     ui->listWidget->addItem(item);
-
+    //Sends signal over to .h
+    connect(ui->pushButton, SIGNAL(on_pushButton_clicked), this, SIGNAL(on_pushButton_clicked()));
 }
 
 MainWindow::~MainWindow()
@@ -22,9 +23,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    NecessaryInfoForm* window;
-    window = new NecessaryInfoForm();
-    window->show();
+    emit this->open_NecI_GUI();
 }
 
 

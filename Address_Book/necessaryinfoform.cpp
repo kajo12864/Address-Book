@@ -7,7 +7,7 @@ NecessaryInfoForm::NecessaryInfoForm(QWidget *parent)
     , ui(new Ui::NecessaryInfoForm)
 {
     ui->setupUi(this);
-    //https://stackoverflow.com/questions/6199962/how-to-pass-data-from-one-form-to-another-in-qt
+
     //Sends signal over to .h
     connect(ui->buttonConfirm, SIGNAL(on_buttonConfirm_clicked), this, SIGNAL(on_buttonConfirm_clicked()));
 
@@ -15,7 +15,7 @@ NecessaryInfoForm::NecessaryInfoForm(QWidget *parent)
 //Destructor
 NecessaryInfoForm::~NecessaryInfoForm()
 {
-    delete ui;
+    this->hide();
 }
 
 //Confirm Button Pressed
@@ -31,6 +31,8 @@ void NecessaryInfoForm::on_buttonConfirm_clicked()
 
 void NecessaryInfoForm::on_buttonCancel_clicked()
 {
-    NecessaryInfoForm::~NecessaryInfoForm();
+    this->hide();
 }
-
+void NecessaryInfoForm::open_NecI_GUI(){
+        this->show();
+}

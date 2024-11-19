@@ -19,7 +19,7 @@ public:
 private slots:
     void on_buttonConfirm_clicked();
     void on_buttonCancel_clicked();
-
+    void open_NecI_GUI();
 signals:
     void new_Contact_Info(const QString &text); //Takes contact info
 
