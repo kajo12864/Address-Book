@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <ui_necessaryinfoform.h>
+#include <QFrame>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,8 +17,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void openNecessaryInfoForm();
+
+
+private slots:
+void on_pushButton_clicked();
+void new_Contact_Info(const QString &text);
 
 private:
     Ui::MainWindow *ui;
+    QWidget *necessaryInfoForm;
 };
+
+
 #endif // MAINWINDOW_H
