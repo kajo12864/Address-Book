@@ -25,38 +25,54 @@
   <property name="windowTitle">
    <string>Required Information</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(0, 85, 255);</string>
+  </property>
   <widget class="QPushButton" name="buttonConfirm">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>190</y>
-     <width>91</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 85, 255);
+color: rgb(170, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Create Contact</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>70</y>
      <width>121</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>Contact Name</string>
+    <string>Name:</string>
    </property>
   </widget>
   <widget class="QPlainTextEdit" name="plainTextName">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>20</x>
      <y>90</y>
-     <width>104</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -66,9 +82,13 @@
     <rect>
      <x>130</x>
      <y>190</y>
-     <width>71</width>
+     <width>81</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 85, 255);
+color: rgb(170, 255, 255);</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -77,9 +97,9 @@
   <widget class="QPlainTextEdit" name="plainTextNumber">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>20</x>
      <y>140</y>
-     <width>104</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -87,14 +107,25 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>191</width>
-     <height>31</height>
+     <x>10</x>
+     <y>10</y>
+     <width>221</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <italic>true</italic>
+     <bold>false</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
-    <string>Please enter the necessary contact information.</string>
+    <string>Please enter the necessary contact information:</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -103,14 +134,19 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>120</y>
      <width>121</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>Contact Phone #</string>
+    <string>Phone Number:</string>
    </property>
   </widget>
  </widget>

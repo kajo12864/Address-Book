@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Address Book</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 170, 127);
+color: black;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
@@ -35,6 +39,9 @@
       <height>491</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #ffffff;</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -44,6 +51,9 @@
       <width>70</width>
       <height>70</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 127);</string>
     </property>
     <property name="text">
      <string/>
