@@ -36,3 +36,13 @@ void NecessaryInfoForm::on_buttonCancel_clicked()
 void NecessaryInfoForm::open_NecI_GUI(){
         this->show();
 }
+void NecessaryInfoForm::on_Profilepic_clicked()
+{
+    QString file_name =QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Images(*.png *.xpm *.jpg"));
+    if(!file_name.isEmpty()){
+        QMessageBox::information(this, "...", file_name);
+        QImage img(file_name);
+        QPixmap pix= QPixmap::fromImage(img);
+
+    }
+}
