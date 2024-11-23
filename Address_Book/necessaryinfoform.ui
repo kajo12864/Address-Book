@@ -149,6 +149,19 @@ color: rgb(170, 255, 255);</string>
     <string>Phone Number:</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="Profilepic">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>230</y>
+     <width>80</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Profile Picture</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
