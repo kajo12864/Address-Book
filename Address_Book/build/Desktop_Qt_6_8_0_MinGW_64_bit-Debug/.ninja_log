@@ -1,0 +1,26 @@
+# ninja log v6
+20	1594	7541745627004971	Address_Book_autogen/timestamp	dad3bc63397619bb
+20	1594	7541745627004971	Address_Book_autogen/mocs_compilation.cpp	dad3bc63397619bb
+20	1594	7541745627004971	C:/Users/ttheo/GitHub/Address-Book/Address_Book/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Address_Book_autogen/timestamp	dad3bc63397619bb
+20	1594	7541745627004971	C:/Users/ttheo/GitHub/Address-Book/Address_Book/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Address_Book_autogen/mocs_compilation.cpp	dad3bc63397619bb
+1604	1733	7541745629785185	Address_Book_autogen/EWIEGA46WW/qrc_resource.cpp	dbf625690f56920c
+1604	1733	7541745629785185	C:/Users/ttheo/GitHub/Address-Book/Address_Book/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Address_Book_autogen/EWIEGA46WW/qrc_resource.cpp	dbf625690f56920c
+1765	2169	7541745630300027	CMakeFiles/Address_Book.dir/Address_Book_autogen/EWIEGA46WW/qrc_resource.cpp.obj	722bf20a362de878
+1759	6863	7541745630239914	CMakeFiles/Address_Book.dir/profiledisplay.cpp.obj	845eebaacc6a8dec
+1754	7296	7541745630189915	CMakeFiles/Address_Book.dir/editprofileinfoform.cpp.obj	56b6bd699b62db42
+1739	8067	7541745630038528	CMakeFiles/Address_Book.dir/main.cpp.obj	399f77dbfc8fd843
+1734	8405	7541745629982885	CMakeFiles/Address_Book.dir/Address_Book_autogen/mocs_compilation.cpp.obj	2e96326ca7e3b836
+1744	8604	7541745630089885	CMakeFiles/Address_Book.dir/mainwindow.cpp.obj	4757164bc84de02c
+1749	9842	7541745630139911	CMakeFiles/Address_Book.dir/necessaryinfoform.cpp.obj	db58e5e1f454ee99
+9843	10418	7541745711077042	Address_Book.exe	7b038e93ae849519
+49	308	7541747117115156	Address_Book_autogen/timestamp	dad3bc63397619bb
+49	308	7541747117115156	Address_Book_autogen/mocs_compilation.cpp	dad3bc63397619bb
+49	308	7541747117115156	C:/Users/ttheo/GitHub/Address-Book/Address_Book/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Address_Book_autogen/timestamp	dad3bc63397619bb
+49	308	7541747117115156	C:/Users/ttheo/GitHub/Address-Book/Address_Book/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/Address_Book_autogen/mocs_compilation.cpp	dad3bc63397619bb
+336	4350	7541747120080108	CMakeFiles/Address_Book.dir/profiledisplay.cpp.obj	845eebaacc6a8dec
+331	4751	7541747120007045	CMakeFiles/Address_Book.dir/editprofileinfoform.cpp.obj	56b6bd699b62db42
+315	5126	7541747119858527	CMakeFiles/Address_Book.dir/main.cpp.obj	399f77dbfc8fd843
+320	5200	7541747119904510	CMakeFiles/Address_Book.dir/mainwindow.cpp.obj	4757164bc84de02c
+309	5356	7541747119798994	CMakeFiles/Address_Book.dir/Address_Book_autogen/mocs_compilation.cpp.obj	2e96326ca7e3b836
+326	5715	7541747119969277	CMakeFiles/Address_Book.dir/necessaryinfoform.cpp.obj	db58e5e1f454ee99
+5715	6086	7541747173869638	Address_Book.exe	7b038e93ae849519
