@@ -22,7 +22,7 @@ public:
 
 private slots:
 void on_pushButton_clicked();
-void new_Contact_Info(const QString &text);
+void new_Contact_Info(const QIcon &icon, const QString &text);
 signals:
 void open_NecI_GUI(); //Opens required info gui
 

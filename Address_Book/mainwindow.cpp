@@ -27,6 +27,7 @@ void MainWindow::on_pushButton_clicked()
 }
 
 
-void MainWindow::new_Contact_Info(const QString &text){
-    ui->listWidget->addItem(text);
+void MainWindow::new_Contact_Info(const QIcon &icon, const QString &text){
+    QListWidgetItem *item = new QListWidgetItem(icon, text);
+    ui->listWidget->addItem(item);
 }

@@ -20,8 +20,9 @@ private slots:
     void on_buttonConfirm_clicked();
     void on_buttonCancel_clicked();
     void open_NecI_GUI();
+    void on_Profilepic_clicked();
 signals:
-    void new_Contact_Info(const QString &text); //Takes contact info
+    void new_Contact_Info(const QIcon icon, const QString &text); //Takes contact info
 
 private:
     Ui::NecessaryInfoForm *ui;
