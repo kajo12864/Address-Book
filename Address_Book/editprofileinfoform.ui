@@ -26,7 +26,8 @@
    <string>Edit Profile Information</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(216, 233, 238);\n</string>
+   <string notr="true">background-color: rgb(216, 233, 238);
+color: rgb(0, 0, 127);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -195,7 +196,7 @@
     <rect>
      <x>10</x>
      <y>390</y>
-     <width>141</width>
+     <width>191</width>
      <height>29</height>
     </rect>
    </property>
@@ -204,6 +205,9 @@
      <pointsize>9</pointsize>
      <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 170, 255);</string>
    </property>
    <property name="text">
     <string>Edit/Upload New Avatar</string>
@@ -246,7 +250,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>311</width>
+     <width>321</width>
      <height>20</height>
     </rect>
    </property>
@@ -258,7 +262,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Add / Edit the following profile information as needed</string>
+    <string>Add / Edit profile information as needed:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="applyBtn">
@@ -269,6 +273,10 @@
      <width>75</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 127);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Apply</string>
@@ -290,7 +298,7 @@
   <widget class="QLabel" name="image_label">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>240</x>
      <y>360</y>
      <width>71</width>
      <height>71</height>
