@@ -25,6 +25,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         resource.qrc
         necessaryinfoform.h necessaryinfoform.cpp necessaryinfoform.ui
+        editprofileinfoform.h editprofileinfoform.cpp editprofileinfoform.ui
+        profiledisplay.h profiledisplay.cpp profiledisplay.ui
 
 
 

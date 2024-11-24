@@ -26,8 +26,8 @@
    <string>Required Information</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(170, 255, 255);
-color: rgb(0, 85, 255);</string>
+   <string notr="true">background-color: rgb(216, 233, 238);
+</string>
   </property>
   <widget class="QPushButton" name="buttonConfirm">
    <property name="geometry">
@@ -39,8 +39,8 @@ color: rgb(0, 85, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 85, 255);
-color: rgb(170, 255, 255);</string>
+    <string notr="true">background-color: rgb(239, 239, 239);
+</string>
    </property>
    <property name="text">
     <string>Create Contact</string>
@@ -87,8 +87,8 @@ color: rgb(170, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 85, 255);
-color: rgb(170, 255, 255);</string>
+    <string notr="true">background-color: rgb(239, 239, 239);
+</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -107,9 +107,9 @@ color: rgb(170, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>10</y>
-     <width>221</width>
+     <width>211</width>
      <height>51</height>
     </rect>
    </property>
@@ -118,7 +118,7 @@ color: rgb(170, 255, 255);</string>
      <pointsize>10</pointsize>
      <italic>true</italic>
      <bold>false</bold>
-     <underline>true</underline>
+     <underline>false</underline>
     </font>
    </property>
    <property name="styleSheet">
@@ -157,6 +157,10 @@ color: rgb(170, 255, 255);</string>
      <width>81</width>
      <height>18</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(239, 239, 239);
+</string>
    </property>
    <property name="text">
     <string>Profile Picture</string>

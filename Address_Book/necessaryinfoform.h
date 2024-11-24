@@ -16,6 +16,7 @@ public:
     ~NecessaryInfoForm();
 
 
+
 private slots:
     void on_buttonConfirm_clicked();
     void on_buttonCancel_clicked();

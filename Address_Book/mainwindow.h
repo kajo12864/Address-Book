@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <qlistwidget.h>
 #include <ui_necessaryinfoform.h>
+#include <ui_profiledisplay.h>
 #include <QFrame>
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,12 +25,15 @@ public:
 private slots:
 void on_pushButton_clicked();
 void new_Contact_Info(const QIcon &icon, const QString &text);
+void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+
 signals:
 void open_NecI_GUI(); //Opens required info gui
 
 private:
     Ui::MainWindow *ui;
     QWidget *necessaryInfoForm;
+    QWidget *profiledisplay;
 };
 
 
