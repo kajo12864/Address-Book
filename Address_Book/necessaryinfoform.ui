@@ -27,26 +27,23 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(216, 233, 238);
-color: black
-;
-
 </string>
   </property>
   <widget class="QPushButton" name="buttonConfirm">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>220</y>
-     <width>91</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(85, 170, 255);
+    <string notr="true">background-color: rgb(239, 239, 239);
 </string>
    </property>
    <property name="text">
-    <string>Add</string>
+    <string>Create Contact</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -66,9 +63,6 @@ color: black
      <bold>true</bold>
     </font>
    </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 85, 255);</string>
-   </property>
    <property name="text">
     <string>Name:</string>
    </property>
@@ -78,7 +72,7 @@ color: black
     <rect>
      <x>20</x>
      <y>90</y>
-     <width>181</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -93,7 +87,8 @@ color: black
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(118, 118, 118);</string>
+    <string notr="true">background-color: rgb(239, 239, 239);
+</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -104,7 +99,7 @@ color: black
     <rect>
      <x>20</x>
      <y>140</y>
-     <width>181</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -127,7 +122,7 @@ color: black
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 85, 255);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Please enter the necessary contact information:</string>
@@ -150,9 +145,6 @@ color: black
      <bold>true</bold>
     </font>
    </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 85, 255);</string>
-   </property>
    <property name="text">
     <string>Phone Number:</string>
    </property>
@@ -161,14 +153,14 @@ color: black
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>170</y>
-     <width>101</width>
-     <height>31</height>
+     <y>190</y>
+     <width>81</width>
+     <height>18</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 85, 255);</string>
+    <string notr="true">background-color: rgb(239, 239, 239);
+</string>
    </property>
    <property name="text">
     <string>Profile Picture</string>
@@ -177,7 +169,7 @@ background-color: rgb(0, 85, 255);</string>
   <widget class="QLabel" name="image_label">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>110</x>
      <y>170</y>
      <width>41</width>
      <height>41</height>
