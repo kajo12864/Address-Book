@@ -77,6 +77,10 @@ color: white;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 127);</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="buttonCancel">
    <property name="geometry">
@@ -102,6 +106,10 @@ color: white;</string>
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 127);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

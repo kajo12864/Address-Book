@@ -18,7 +18,10 @@ public:
 private:
     Ui::profiledisplay *ui;
 private slots:
-    void on_pushButton_clicked();
+    void on_editBtn_clicked();
+    void on_closeBtn_clicked();
+    void on_deleteBtn_clicked();
+
 signals:
     void open_EditI_GUI(); //Opens edit info gui
 };

@@ -20,6 +20,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void openNecessaryInfoForm();
+    std::string contacts[2] = {"John Smith", "Diana Doe"};
 
 
 private slots:

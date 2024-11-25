@@ -17,6 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
     QListWidgetItem *item = new QListWidgetItem(QIcon(":/images/images/test_profile.png"), menuinfo);
     QListWidget *listW = ui->listWidget;
     listW->addItem(item);
+    for (int el = 0; el < 2; el++) {
+        QListWidgetItem *listContacts = new QListWidgetItem(this->contacts[el].c_str(), nullptr);
+        listW->addItem(listContacts);
+    }
     //Sends signal over to .h
     connect(ui->pushButton, SIGNAL(on_pushButton_clicked), this, SIGNAL(on_pushButton_clicked()));
 }

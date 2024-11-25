@@ -5,10 +5,23 @@ profiledisplay::profiledisplay(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::profiledisplay)
 {
-    ui->setupUi(this);
     //Sends signal over to .h
-    connect(ui->pushButton, SIGNAL(on_pushButton_clicked), this, SIGNAL(on_pushButton_clicked()));
+    ui->setupUi(this);
 
+    //setting up the form with contact info
+    QLabel *labelForName = ui->lbl_name;
+    //QLabel *labelForContact = ui->lbl_contact;
+    //QLabel *labelForNumber = ui->lbl_number;
+    //QLabel *labelForDOB = ui->lbl_dob;
+    //QLabel *labelForAddress = ui->lbl_address;
+    labelForName->setText("Diana Jones");
+    //labelForContact->setText("hi");
+    //labelForNumber->setText("hi");
+    //labelForDOB->setText("hi");
+    //labelForAddress->setText("hi");
+
+    //Sends signal over to .h
+    connect(ui->editBtn, SIGNAL(on_editBtn_clicked), this, SIGNAL(on_editBtn_clicked()));
 }
 
 profiledisplay::~profiledisplay()
@@ -17,7 +30,7 @@ profiledisplay::~profiledisplay()
 }
 
 //Opens Edit Info GUI
-void profiledisplay::on_pushButton_clicked()
+void profiledisplay::on_editBtn_clicked()
 {
     emit this->open_EditI_GUI();
 }
@@ -34,3 +47,17 @@ int heremain(int argc, char *argv[])
                      &editinfo,SLOT(open_EditI_GUI( )));
     return a.exec();
 }
+
+//closes current window
+void profiledisplay::on_closeBtn_clicked()
+{
+    this->hide();
+}
+
+
+//delete contact button
+void profiledisplay::on_deleteBtn_clicked()
+{
+    emit this->open_EditI_GUI();
+}
+

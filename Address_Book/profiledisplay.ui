@@ -115,7 +115,7 @@ color: rgb(0, 0, 127);
     <string>Address: </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="editBtn">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -132,7 +132,7 @@ color: white;</string>
     <string>Edit</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="deleteBtn">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -232,7 +232,7 @@ color: white</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="closeBtn">
    <property name="geometry">
     <rect>
      <x>274</x>
