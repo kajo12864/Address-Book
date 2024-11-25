@@ -40,8 +40,7 @@ color: rgb(0, 0, 127);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 127);
-color: white;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Add</string>

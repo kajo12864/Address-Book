@@ -8,7 +8,7 @@ profiledisplay::profiledisplay(QWidget *parent)
     //Sends signal over to .h
     ui->setupUi(this);
 
-    //setting up the form with contact info
+    //WIP - Setting up the form with contact info
     QLabel *labelForName = ui->lbl_name;
     //QLabel *labelForContact = ui->lbl_contact;
     //QLabel *labelForNumber = ui->lbl_number;
@@ -29,35 +29,22 @@ profiledisplay::~profiledisplay()
     delete ui;
 }
 
-//Opens Edit Info GUI
+//Not Yet Implemented - Will Open Edit Info GUI
 void profiledisplay::on_editBtn_clicked()
 {
     emit this->open_EditI_GUI();
 }
 
-int heremain(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    //Instantiating forms
-    profiledisplay mainpage;
-    EditProfileInfoForm editinfo;
-    //Signals
-    //Opening Necessary Info GUI from Main Window
-    QObject::connect(&mainpage, SIGNAL(open_EditI_GUI( )),
-                     &editinfo,SLOT(open_EditI_GUI( )));
-    return a.exec();
-}
-
-//closes current window
+//Closes current window
 void profiledisplay::on_closeBtn_clicked()
 {
-    this->hide();
+    profiledisplay::~profiledisplay();
 }
 
 
 //delete contact button
 void profiledisplay::on_deleteBtn_clicked()
 {
-    emit this->open_EditI_GUI();
+    //Not Yet Implemented
 }
 

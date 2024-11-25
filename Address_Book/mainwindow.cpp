@@ -13,14 +13,16 @@ MainWindow::MainWindow(QWidget *parent)
     QString menuinfo;
     //Profile information can be broken up using \n. For instance, we would want the name to be on the first line and phone number on the second.
     //This is a profile used for quickly testing how items will appear in the list.
-    menuinfo = "TEST PROFILE \n 555-1234-5678";
-    QListWidgetItem *item = new QListWidgetItem(QIcon(":/images/images/test_profile.png"), menuinfo);
-    QListWidget *listW = ui->listWidget;
-    listW->addItem(item);
-    for (int el = 0; el < 2; el++) {
-        QListWidgetItem *listContacts = new QListWidgetItem(this->contacts[el].c_str(), nullptr);
-        listW->addItem(listContacts);
-    }
+    //menuinfo = "TEST PROFILE \n 555-1234-5678";
+    //QListWidgetItem *item = new QListWidgetItem(QIcon(":/images/images/test_profile.png"), menuinfo);
+    //QListWidget *listW = ui->listWidget;
+    //listW->addItem(item);
+
+    //Another test which communicates with mainwindow.h to add contacts (names only). Test intermediate for loading contacts from save file.
+    //for (int el = 0; el < 2; el++) {
+        //QListWidgetItem *listContacts = new QListWidgetItem(this->contacts[el].c_str(), nullptr);
+        //listW->addItem(listContacts);
+    //}
     //Sends signal over to .h
     connect(ui->pushButton, SIGNAL(on_pushButton_clicked), this, SIGNAL(on_pushButton_clicked()));
 }
@@ -50,7 +52,7 @@ void profile_Display()
     win = new profiledisplay;
     win->show();
     EditProfileInfoForm editinfo;
-    //WIP
+    //WIP (intended for displaying edit profile properties screen)
     //connect(&win, SIGNAL(open_EditI_GUI( )),&editinfo,SLOT(open_EditI_GUI( )));
 }
 
