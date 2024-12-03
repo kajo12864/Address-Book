@@ -1,8 +1,10 @@
 #include "necessaryinfoform.h"
+#include "contact.h"
 #include "ui_necessaryinfoform.h"
 #include <qlistwidget.h>
 #include <QImage>
 #include <QFileDialog>
+QVector<Contact> Contacts_Data;
 //Constructor
 NecessaryInfoForm::NecessaryInfoForm(QWidget *parent)
     : QWidget(parent)
@@ -23,16 +25,25 @@ NecessaryInfoForm::~NecessaryInfoForm()
 //Confirm Button Pressed
 void NecessaryInfoForm::on_buttonConfirm_clicked()
 {
-    QString new_contact_text; //Contact text information
+    QString name = ui->plainTextName->toPlainText();
+    QString number = ui->plainTextNumber->toPlainText();
     QIcon icon; //Contact profile picture information
     icon.addPixmap(ui->image_label->pixmap()); //Converts pixmap from preview image into a QIcon
-    new_contact_text = ui->plainTextName->toPlainText(); //Converts user name input to plain text
-    new_contact_text.append("\n");
-    new_contact_text.append(ui->plainTextNumber->toPlainText()); //Converts user phone number input to plain text
-    emit this->new_Contact_Info(icon,new_contact_text); //Sends a signal out to the Main Window to receive new contact information.
+    emit this->new_Contact_Info(icon,name,number); //Sends a signal out to the Main Window to receive new contact information.
+    Contact new_contact(ui->plainTextName->toPlainText(),ui->plainTextNumber->toPlainText(),icon,0);
+    Contacts_Data.append(new_contact); //Adds the contact to the vector of contact data
+    //WIP: Saving contact data to file
+    //QFile savefile("contacts.sav");
+    //QDataStream &operator<<(QDataStream &out,  Contact &);
+    //QDataStream &operator>>(QDataStream &, Contact &);
     //ui->label->setText(new_contact_text); //Used for debugging (checking what text input was entered)
 }
 
+QDataStream &operator<<(QDataStream &out,  Contact &new_contact)
+{
+    out << new_contact.get_name();
+    return out;
+}
 //Cancelling adding a new contact
 void NecessaryInfoForm::on_buttonCancel_clicked()
 {

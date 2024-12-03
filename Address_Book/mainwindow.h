@@ -25,7 +25,7 @@ public:
 
 private slots:
 void on_pushButton_clicked(); //Used when the user clicks the add contact button
-void new_Contact_Info(const QIcon &icon, const QString &text); //Used to receive contact info from necessaryinfoform
+void new_Contact_Info(const QIcon &icon, const QString &name, const QString &number); //Used to receive contact info from necessaryinfoform
 void on_listWidget_itemDoubleClicked(QListWidgetItem *item); //Used to create a new profile window when a list item is double-clicked
 
 signals:
@@ -35,6 +35,7 @@ private:
     Ui::MainWindow *ui;
     QWidget *necessaryInfoForm;
     QWidget *profiledisplay;
+    QMap<QString, QString> contacts; //Similar to an array. Keeps track of the ID of each contact.
 };
 
 

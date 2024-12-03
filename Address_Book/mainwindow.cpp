@@ -40,13 +40,20 @@ void MainWindow::on_pushButton_clicked()
 }
 
 //Receiving contact information from the Add Contact form
-void MainWindow::new_Contact_Info(const QIcon &icon, const QString &text){
-    QListWidgetItem *item = new QListWidgetItem(icon, text);
+void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const QString &number){
+    //QStringList textcontents;
+    //if(!contacts.contains(name)){ //If the contact by that name does not already exist
+        //contacts.insert(name,address);
+    QString new_contact_text = name; //Converts user name input to plain text
+    new_contact_text.append("\n");
+    new_contact_text.append(number); //Converts user phone number input to plain text
+    QListWidgetItem *item = new QListWidgetItem(icon, new_contact_text);
     ui->listWidget->addItem(item);
+    //}
 }
 
 //Displays an individual user's profile. This creates a new window instance each time.
-void profile_Display()
+void profile_Display(QListWidgetItem item)
 {
     profiledisplay* win;
     win = new profiledisplay;
@@ -59,6 +66,6 @@ void profile_Display()
 //Receives when user double clicks on a list item
 void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {
-    profile_Display();
+    profile_Display(*item);
 }
 
