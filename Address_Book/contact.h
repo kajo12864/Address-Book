@@ -23,7 +23,7 @@ public:
         return name;
     };
     Contact();
-
+    virtual void Call(){qDebug() << "Calling" << name;} //If this were a real app project, this would be used to call the contact
 };
 
 #endif // CONTACT_H
