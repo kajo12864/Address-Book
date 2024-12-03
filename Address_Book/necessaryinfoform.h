@@ -3,7 +3,6 @@
 
 #include "contact.h"
 #include <QWidget>
-
 namespace Ui {
 class NecessaryInfoForm;
 }
@@ -26,7 +25,7 @@ private slots: //various functions dependent on interactions from the parent GUI
     void on_Profilepic_clicked(); //used to get image file input from user
     //functions that send out information to other windows
 signals:
-    void new_Contact_Info(const QIcon &icon, const QString &name, const QString &number); //Sends contact info
+    void new_Contact_Info(const QIcon &icon, const QString &name, const QString &number,const QString &contact_type); //Sends contact info
 
 private:
     Ui::NecessaryInfoForm *ui;

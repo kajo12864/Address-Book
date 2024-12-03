@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include "./profiledisplay.h"
 #include "editprofileinfoform.h"
-
+#include <QObject>
 //Set-up
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
     //}
     //Sends signal over to .h
     connect(ui->pushButton, SIGNAL(on_pushButton_clicked), this, SIGNAL(on_pushButton_clicked()));
+    connect(ui->listWidget, SIGNAL(profile_Display), this, SIGNAL(profile_Display()));
+
 }
 
 //Closing the window
@@ -40,7 +42,7 @@ void MainWindow::on_pushButton_clicked()
 }
 
 //Receiving contact information from the Add Contact form
-void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const QString &number){
+void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const QString &number, const QString &contact_type){
     //QStringList textcontents;
     //if(!contacts.contains(name)){ //If the contact by that name does not already exist
         //contacts.insert(name,address);
@@ -53,12 +55,18 @@ void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const 
 }
 
 //Displays an individual user's profile. This creates a new window instance each time.
-void profile_Display(QListWidgetItem item)
+void MainWindow::profile_Display(QListWidgetItem item)
 {
-    profiledisplay* win;
-    win = new profiledisplay;
+
+    class profiledisplay* win;
+    win = new class profiledisplay;
+    QObject::connect(this,SIGNAL(set_Contact_Profile_Details(const QListWidgetItem &)), win,SLOT(set_Contact_Profile_Details(const QListWidgetItem &)));
     win->show();
     EditProfileInfoForm editinfo;
+     qDebug() << "Emitting edit profile info \n";
+     emit this->set_Contact_Profile_Details(item);
+
+
     //WIP (intended for displaying edit profile properties screen)
     //connect(&win, SIGNAL(open_EditI_GUI( )),&editinfo,SLOT(open_EditI_GUI( )));
 }

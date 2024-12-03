@@ -43,7 +43,7 @@ color: rgb(0, 0, 127);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="image_label_2">
+  <widget class="QLabel" name="name_label">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -61,7 +61,7 @@ color: rgb(0, 0, 127);
     <string>Name:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="image_label_3">
+  <widget class="QLabel" name="number_label">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -79,7 +79,7 @@ color: rgb(0, 0, 127);
     <string>Phone #: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="image_label_4">
+  <widget class="QLabel" name="dob_label">
    <property name="geometry">
     <rect>
      <x>15</x>
@@ -97,7 +97,7 @@ color: rgb(0, 0, 127);
     <string>DOB: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="image_label_5">
+  <widget class="QLabel" name="address_label">
    <property name="geometry">
     <rect>
      <x>15</x>
@@ -147,7 +147,7 @@ color: rgb(0, 0, 127);
     <string>Delete Contact</string>
    </property>
   </widget>
-  <widget class="QLabel" name="image_label_6">
+  <widget class="QLabel" name="contact_label">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -168,7 +168,7 @@ color: rgb(0, 0, 127);
   <widget class="QLabel" name="lbl_name">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>130</x>
      <y>0</y>
      <width>191</width>
      <height>21</height>
@@ -181,9 +181,9 @@ color: rgb(0, 0, 127);
   <widget class="QLabel" name="lbl_number">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>140</x>
      <y>20</y>
-     <width>181</width>
+     <width>121</width>
      <height>21</height>
     </rect>
    </property>
@@ -194,7 +194,7 @@ color: rgb(0, 0, 127);
   <widget class="QLabel" name="lbl_contact">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>170</x>
      <y>40</y>
      <width>161</width>
      <height>21</height>
@@ -220,7 +220,7 @@ color: rgb(0, 0, 127);
   <widget class="QLabel" name="lbl_address">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>70</x>
      <y>100</y>
      <width>271</width>
      <height>21</height>

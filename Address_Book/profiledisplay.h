@@ -1,7 +1,9 @@
 #ifndef PROFILEDISPLAY_H
 #define PROFILEDISPLAY_H
 
+#include "contact.h"
 #include <QWidget>
+#include <qlistwidget.h>
 
 namespace Ui {
 class profiledisplay;
@@ -22,6 +24,7 @@ private slots:
     void on_editBtn_clicked();
     void on_closeBtn_clicked();
     void on_deleteBtn_clicked();
+    void set_Contact_Profile_Details(QListWidgetItem item);
 
 signals:
     void open_EditI_GUI(); //Opens edit info gui

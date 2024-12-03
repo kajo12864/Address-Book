@@ -7,19 +7,6 @@ profiledisplay::profiledisplay(QWidget *parent)
 {
     //Sends signal over to .h
     ui->setupUi(this);
-
-    //WIP - Setting up the form with contact info
-    QLabel *labelForName = ui->lbl_name;
-    //QLabel *labelForContact = ui->lbl_contact;
-    //QLabel *labelForNumber = ui->lbl_number;
-    //QLabel *labelForDOB = ui->lbl_dob;
-    //QLabel *labelForAddress = ui->lbl_address;
-    labelForName->setText("Diana Jones");
-    //labelForContact->setText("hi");
-    //labelForNumber->setText("hi");
-    //labelForDOB->setText("hi");
-    //labelForAddress->setText("hi");
-
     //Sends signal over to .h
     connect(ui->editBtn, SIGNAL(on_editBtn_clicked), this, SIGNAL(on_editBtn_clicked()));
 }
@@ -39,6 +26,25 @@ void profiledisplay::on_editBtn_clicked()
 void profiledisplay::on_closeBtn_clicked()
 {
     profiledisplay::~profiledisplay();
+}
+
+
+
+void profiledisplay::set_Contact_Profile_Details(QListWidgetItem item)
+{
+    qDebug() << "SENT \n";
+    QString text = item.text();
+    QStringList text_contents = text.split('\n');
+    QString name = text_contents[0];
+    QString number = text_contents[1];
+    QIcon icon = item.icon();
+    //Converting icon into a pixmap so it may be displayed on a label
+    QSize max(0, 0); for(QList<QSize> sizes =  icon.availableSizes(); !sizes.isEmpty(); sizes.removeFirst()) if(sizes.first().width() > max.width()) max = sizes.first();
+    QPixmap pixmap = icon.pixmap(max);
+    ui->lbl_name->setText(name);
+    ui->lbl_number->setText(number);
+    ui->image_label->setPixmap(pixmap);
+
 }
 
 

@@ -1,6 +1,5 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <qlistwidget.h>
 #include <ui_necessaryinfoform.h>
@@ -25,13 +24,15 @@ public:
 
 private slots:
 void on_pushButton_clicked(); //Used when the user clicks the add contact button
-void new_Contact_Info(const QIcon &icon, const QString &name, const QString &number); //Used to receive contact info from necessaryinfoform
+void new_Contact_Info(const QIcon &icon, const QString &name, const QString &number,const QString &contact_type); //Used to receive contact info from necessaryinfoform
 void on_listWidget_itemDoubleClicked(QListWidgetItem *item); //Used to create a new profile window when a list item is double-clicked
-
+void profile_Display(QListWidgetItem item);
 signals:
 void open_NecI_GUI(); //Opens required info input gui
 
+void set_Contact_Profile_Details(QListWidgetItem item); //Sends data from the main list window to the newly opened individual profile
 private:
+
     Ui::MainWindow *ui;
     QWidget *necessaryInfoForm;
     QWidget *profiledisplay;

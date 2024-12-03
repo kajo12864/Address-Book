@@ -8,20 +8,22 @@
 
 class Contact
 {
-private:
+protected:
     //required data
     QString name;
     QString phone_number;
     QIcon icon;
-    int contact_type; //0 : Normal , 1 : Friend , 2 : Family, 3 : Emergency
+    QString contact_type;
     //optional data
     QDate birthdate;
     QString address;
 public:
-    Contact(QString name, QString phone_number, QIcon icon, int contact_type);
+    Contact(QString name, QString phone_number, QIcon icon, QString contact_type);
     QString get_name(){
         return name;
     };
+    Contact();
+
 };
 
 #endif // CONTACT_H

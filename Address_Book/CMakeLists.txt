@@ -28,6 +28,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         editprofileinfoform.h editprofileinfoform.cpp editprofileinfoform.ui
         profiledisplay.h profiledisplay.cpp profiledisplay.ui
         contact.h contact.cpp
+        family_contact.h family_contact.cpp
+        friend_contact.h friend_contact.cpp
+        emergency_contact.h emergency_contact.cpp
+
 
 
 
