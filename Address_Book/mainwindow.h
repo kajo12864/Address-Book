@@ -1,10 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "contact.h"
 #include <QMainWindow>
 #include <qlistwidget.h>
 #include <ui_necessaryinfoform.h>
 #include <ui_profiledisplay.h>
-#include <ui_editprofileinfoform.h>
 #include <QFrame>
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -31,13 +31,13 @@ void profile_Display(QListWidgetItem item);
 signals:
 void open_NecI_GUI(); //Opens required info input gui
 
-void set_Contact_Profile_Details(QListWidgetItem item); //Sends data from the main list window to the newly opened individual profile
+void set_Contact_Profile_Details(Contact sent_contact); //Sends data from the main list window to the newly opened individual profile
 private:
 
     Ui::MainWindow *ui;
     QWidget *necessaryInfoForm;
     QWidget *profiledisplay;
-    QWidget *editprofileinfoForm;
+    //QWidget *editprofileinfoForm;
     QMap<QString, QString> contacts; //Similar to an array. Keeps track of the ID of each contact.
 };
 

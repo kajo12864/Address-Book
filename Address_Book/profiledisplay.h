@@ -22,7 +22,7 @@ private slots:
     void on_editBtn_clicked();
     void on_closeBtn_clicked();
     void on_deleteBtn_clicked();
-    void set_Contact_Profile_Details(QListWidgetItem item);
+    void set_Contact_Profile_Details(Contact sent_contact);
 
 
 signals:

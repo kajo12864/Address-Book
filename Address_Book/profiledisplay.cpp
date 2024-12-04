@@ -36,21 +36,25 @@ void profiledisplay::on_closeBtn_clicked()
 
 
 
-void profiledisplay::set_Contact_Profile_Details(QListWidgetItem item)
+void profiledisplay::set_Contact_Profile_Details(Contact sent_contact)
 {
     qDebug() << "SENT \n";
-    QString text = item.text();
-    QStringList text_contents = text.split('\n');
-    QString name = text_contents[0];
-    QString number = text_contents[1];
-    QIcon icon = item.icon();
+    QString name = sent_contact.get_name();
+    QString number = sent_contact.get_number();
+    QIcon icon = sent_contact.get_icon();
+    QString contact_type = sent_contact.get_contact_type();
+    QString address = sent_contact.get_address();
+    QDate dob = sent_contact.get_dob();
     //Converting icon into a pixmap so it may be displayed on a label
     QSize max(0, 0); for(QList<QSize> sizes =  icon.availableSizes(); !sizes.isEmpty(); sizes.removeFirst()) if(sizes.first().width() > max.width()) max = sizes.first();
     QPixmap pixmap = icon.pixmap(max);
     ui->lbl_name->setText(name);
     ui->lbl_number->setText(number);
     ui->image_label->setPixmap(pixmap);
-
+    ui->lbl_contact->setText(contact_type);
+    ui->lbl_address->setText(address);
+    QString dob_string = dob.toString("MM:dd:yyyy"); //Converts QDate to string (format month / day / year)
+    ui->lbl_dob->setText(dob_string);
 }
 
 

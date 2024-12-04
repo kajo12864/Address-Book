@@ -2,7 +2,7 @@
 #define EDITPROFILEINFOFORM_H
 
 #include <QWidget>
-
+#include ".\ui_editprofileinfoform.h"
 namespace Ui {
 class EditProfileInfoForm;
 }

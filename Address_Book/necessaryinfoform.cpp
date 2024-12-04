@@ -10,7 +10,7 @@
 #include <QMessageBox>
 #include <QIntValidator>
 #include <QLineEdit>
- QVector<Contact*> Contacts_Data;
+ QVector<Contact*> Nec_Contacts_Data; //Vector to hold contact class & subclass objects
 
 //Constructor
 NecessaryInfoForm::NecessaryInfoForm(QWidget *parent)
@@ -49,17 +49,17 @@ void NecessaryInfoForm::on_buttonConfirm_clicked()
 
     // auto = placeholder for data type until initialized
     // checks if the phone number already exists
-    auto findExistingNumber = std::find_if(Contacts_Data.begin(), Contacts_Data.end(), [&number](auto &contact) { return (contact->get_number() == number); });
+    auto findExistingNumber = std::find_if(Nec_Contacts_Data.begin(), Nec_Contacts_Data.end(), [&number](auto &contact) { return (contact->get_number() == number); });
 
     //checks if the name already exists
-    auto findExistingName = std::find_if(Contacts_Data.begin(), Contacts_Data.end(), [&name](auto &contact) { return (contact->get_name() == name); });
+    auto findExistingName = std::find_if(Nec_Contacts_Data.begin(), Nec_Contacts_Data.end(), [&name](auto &contact) { return (contact->get_name() == name); });
 
     //Form validations
     if (name == "") {
         QMessageBox::warning(this, "Input Missing!", "Please enter contact name.");
     }
     // if the find variable does not make it all the way to the end of the vector, then the name was found
-    else if (findExistingName != Contacts_Data.end()) {
+    else if (findExistingName != Nec_Contacts_Data.end()) {
         QMessageBox::critical(this, "Invalid Name!", "Name already exists. Please enter a different name or update the existing contact.");
     }
     else if (number == "") {
@@ -69,31 +69,25 @@ void NecessaryInfoForm::on_buttonConfirm_clicked()
         QMessageBox::critical(this, "Invalid Phone Number!", "Phone number must be 10 digits long.");
     }
     // if the find variable does not make it all the way to the end of the vector, then the number was found
-    else if (findExistingNumber != Contacts_Data.end()) {
+    else if (findExistingNumber != Nec_Contacts_Data.end()) {
         QMessageBox::critical(this, "Invalid Phone Number!", "Phone number already exists. Please enter a different number or update the existing contact.");
     }
     else {
         qDebug() << "New contact info emitted \n";
         emit this->new_Contact_Info(icon,name,number,contact_type); //Sends a signal out to the Main Window to receive new contact information.
-
         if(contact_type == "Normal"){
             Contact new_contact(name,number,icon,contact_type);
-            Contacts_Data.append(new Contact(name,number,icon,contact_type)); //Adds the contact to the vector of contact data
+            Nec_Contacts_Data.append(new Contact(name,number,icon,contact_type)); //Adds the contact to the vector of contact data
         }
         else if(contact_type == "Friend"){
-            Contacts_Data.append(new Friend_Contact(name,number,icon,contact_type));
+            Nec_Contacts_Data.append(new Friend_Contact(name,number,icon,contact_type));
         }
         else if(contact_type == "Family"){
-            Contacts_Data.append(new Family_Contact(name,number,icon,contact_type));
+            Nec_Contacts_Data.append(new Family_Contact(name,number,icon,contact_type));
         }
         else if(contact_type == "Emergency"){
-            Contacts_Data.append(new Emergency_Contact(name,number,icon,contact_type));
+            Nec_Contacts_Data.append(new Emergency_Contact(name,number,icon,contact_type));
         }
-        //WIP: Saving contact data to file
-        //QFile savefile("contacts.sav");
-        //QDataStream &operator<<(QDataStream &out,  Contact &);
-        //QDataStream &operator>>(QDataStream &, Contact &);
-        //ui->label->setText(new_contact_text); //Used for debugging (checking what text input was entered)
 
         //reset inputs
         ui->lineName->clear();

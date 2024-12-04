@@ -2,8 +2,11 @@
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
 #include "./profiledisplay.h"
-#include "editprofileinfoform.h"
+#include "emergency_contact.h"
+#include "family_contact.h"
+#include "friend_contact.h"
 #include <QObject>
+ QVector<Contact*> Contacts_Data; //Vector to hold contact class & subclass objects
 //Set-up
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,6 +52,25 @@ void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const 
     new_contact_text.append(number); //Converts user phone number input to plain text
     QListWidgetItem *item = new QListWidgetItem(icon, new_contact_text);
     ui->listWidget->addItem(item);
+    if(contact_type == "Normal"){
+        Contact new_contact(name,number,icon,contact_type);
+        Contacts_Data.append(new Contact(name,number,icon,contact_type)); //Adds the contact to the vector of contact data
+    }
+    else if(contact_type == "Friend"){
+        Contacts_Data.append(new Friend_Contact(name,number,icon,contact_type));
+    }
+    else if(contact_type == "Family"){
+        Contacts_Data.append(new Family_Contact(name,number,icon,contact_type));
+    }
+    else if(contact_type == "Emergency"){
+        Contacts_Data.append(new Emergency_Contact(name,number,icon,contact_type));
+    }
+    //WIP: Saving contact data to file
+    //QFile savefile("contacts.sav");
+    //QDataStream &operator<<(QDataStream &out,  Contact &);
+    //QDataStream &operator>>(QDataStream &, Contact &);
+    //ui->label->setText(new_contact_text); //Used for debugging (checking what text input was entered)
+
 }
 
 //Removing contacts
@@ -73,11 +95,19 @@ void MainWindow::profile_Display(QListWidgetItem item)
 
     class profiledisplay* win;
     win = new class profiledisplay;
-    QObject::connect(this,SIGNAL(set_Contact_Profile_Details(const QListWidgetItem &)), win,SLOT(set_Contact_Profile_Details(const QListWidgetItem &)));
+    QObject::connect(this,SIGNAL(set_Contact_Profile_Details(const Contact &)), win,SLOT(set_Contact_Profile_Details(const Contact &)));
     win->show();
-     qDebug() << "Emitting individual profile info \n";
-     emit this->set_Contact_Profile_Details(item);
-
+    QString text = item.text();
+    QStringList text_contents = text.split('\n');
+    QString name = text_contents[0];
+    for(int i=0; i < Contacts_Data.size(); i++){
+        if (Contacts_Data[i]->get_name() == name){
+            qDebug() << "Found matching contact! \n";
+            Contact* sendover_contact = Contacts_Data[i];
+            qDebug() << "Emitting individual profile info \n";
+            emit this->set_Contact_Profile_Details(*sendover_contact);
+        }
+    }
 
     //WIP (intended for displaying edit profile properties screen)
     //connect(&win, SIGNAL(open_EditI_GUI( )),&editinfo,SLOT(open_EditI_GUI( )));

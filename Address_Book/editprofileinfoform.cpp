@@ -21,6 +21,6 @@ void EditProfileInfoForm::open_EditI_GUI(){
 //Cancel button (deletes profile window)
 void EditProfileInfoForm::on_cancelBtn_clicked()
 {
-    delete ui;
+    EditProfileInfoForm::~EditProfileInfoForm();
 }
 
