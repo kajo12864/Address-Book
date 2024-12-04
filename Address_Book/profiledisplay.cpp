@@ -1,6 +1,7 @@
 #include "profiledisplay.h"
 #include "ui_profiledisplay.h"
 #include "editprofileinfoform.h"
+
 profiledisplay::profiledisplay(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::profiledisplay)
@@ -8,7 +9,8 @@ profiledisplay::profiledisplay(QWidget *parent)
     //Sends signal over to .h
     ui->setupUi(this);
     //Sends signal over to .h
-    connect(ui->editBtn, SIGNAL(on_editBtn_clicked), this, SIGNAL(on_editBtn_clicked()));
+    connect(ui->editBtn, SIGNAL(clicked()), this, SLOT(on_editBtn_clicked()));
+    connect(ui->deleteBtn, SIGNAL(clicked()), this, SLOT(on_deleteBtn_clicked()));
 }
 
 profiledisplay::~profiledisplay()
@@ -52,5 +54,9 @@ void profiledisplay::set_Contact_Profile_Details(QListWidgetItem item)
 void profiledisplay::on_deleteBtn_clicked()
 {
     //Not Yet Implemented
+    QString name = ui->lbl_name->text();
+    QString number = ui->lbl_number->text();
+    emit this->remove_Contact(name, number); //Sends a signal out to the Main Window to delete contact.
+    qDebug() << "Contact removed \n";
 }
 

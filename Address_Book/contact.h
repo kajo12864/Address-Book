@@ -22,6 +22,9 @@ public:
     QString get_name(){
         return name;
     };
+    QString get_number() {
+        return phone_number;
+    }
     Contact();
     virtual void Call(){qDebug() << "Calling" << name;} //If this were a real app project, this would be used to call the contact
 };
