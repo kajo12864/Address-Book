@@ -23,7 +23,9 @@ profiledisplay::~profiledisplay()
 void profiledisplay::on_editBtn_clicked()
 {
     qDebug() << "Opening edit fields";
-    emit this->open_EditI_GUI();
+    class EditProfileInfoForm* edit_window;
+    edit_window = new class EditProfileInfoForm;
+    edit_window->show();
 }
 
 //Closes current window

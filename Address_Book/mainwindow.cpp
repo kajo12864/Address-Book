@@ -75,8 +75,7 @@ void MainWindow::profile_Display(QListWidgetItem item)
     win = new class profiledisplay;
     QObject::connect(this,SIGNAL(set_Contact_Profile_Details(const QListWidgetItem &)), win,SLOT(set_Contact_Profile_Details(const QListWidgetItem &)));
     win->show();
-    EditProfileInfoForm editinfo;
-     qDebug() << "Emitting edit profile info \n";
+     qDebug() << "Emitting individual profile info \n";
      emit this->set_Contact_Profile_Details(item);
 
 
