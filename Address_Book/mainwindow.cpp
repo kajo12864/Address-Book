@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
 #include "./profiledisplay.h"
+#include "editprofileinfoform.h"
 #include "emergency_contact.h"
 #include "family_contact.h"
 #include "friend_contact.h"
@@ -29,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     //Sends signal over to .h
     connect(ui->pushButton, SIGNAL(clicked()), this, SIGNAL(on_pushButton_clicked()));
     connect(ui->listWidget, SIGNAL(doubleClicked()), this, SIGNAL(profile_Display()));
-
 }
 
 //Closing the window
@@ -74,19 +74,27 @@ void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const 
 }
 
 //Removing contacts
-void MainWindow::remove_Contact(const QString &name, const QString &number){
+void MainWindow::remove_Contact(const QString &given_name, const QString &given_number){
     qDebug() << "Hi";
-    qDebug() << name;
-    QString new_contact_text = name; //Converts user name input to plain text
-   // new_contact_text.append("\n");
-    //new_contact_text.append(number); //Converts user phone number input to plain text
-    //QListWidgetItem *item = new QListWidgetItem(icon, new_contact_text);
-    QList<QListWidgetItem *> contact = ui->listWidget->findItems(new_contact_text, Qt::MatchExactly);
-    qDebug() << contact.toList();
-    for (int var = 0; var < contact.size(); ++var) {
-        qDebug() << contact[var];
-        ui->listWidget->removeItemWidget(contact[var]);
+    qDebug() << given_name;
+    QString re_contact_text = given_name; //Converts user name input to plain text
+    QString re_contact_phone = given_number;
+    //For each list item, check if the name and number match the given parameters
+    for (int i = 0; i < ui->listWidget->count();++i){
+        QListWidgetItem* item = ui->listWidget->item(i);
+        QString text = item->text();
+        QStringList text_contents = text.split('\n');
+        QString name = text_contents[0];
+        QString number = text_contents[1];
+        if(name == given_name && number == given_number){
+            ui->listWidget->removeItemWidget(item);
+            qDebug() << "Removed item successfully.";
+        }
     }
+    //for (int var = 0; var < contact.size(); ++var) {
+    //    qDebug() << contact[var];
+    //    ui->listWidget->removeItemWidget(contact[var]);
+    //}
 }
 
 //Displays an individual user's profile. This creates a new window instance each time.

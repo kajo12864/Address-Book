@@ -27,7 +27,6 @@ private slots:
 
 signals:
     void open_EditI_GUI(); //Opens edit info gui;
-
     void remove_Contact(const QString &name, const QString &number); //Used to remove contact
 
 private:

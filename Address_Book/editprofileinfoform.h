@@ -19,7 +19,6 @@ private slots:
 
     void on_cancelBtn_clicked();
 public slots:
-   void open_EditI_GUI(); //Receives that the edit GUI has been requested to open
 
 private:
     Ui::EditProfileInfoForm *ui;

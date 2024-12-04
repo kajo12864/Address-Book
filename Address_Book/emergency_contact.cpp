@@ -4,5 +4,5 @@ Emergency_Contact::Emergency_Contact(QString name, QString phone_number, QIcon i
     this->name = name;
     this->phone_number = phone_number;
     this->icon = icon;
-    this->contact_type = contact_type;
+    this->contact_type = "Emergency";
 }
