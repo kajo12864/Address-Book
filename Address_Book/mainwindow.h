@@ -30,7 +30,6 @@ void on_listWidget_itemDoubleClicked(QListWidgetItem *item); //Used to create a 
 void profile_Display(QListWidgetItem item);
 signals:
 void open_NecI_GUI(); //Opens required info input gui
-    void open_EditI_GUI();
 
 void set_Contact_Profile_Details(QListWidgetItem item); //Sends data from the main list window to the newly opened individual profile
 private:

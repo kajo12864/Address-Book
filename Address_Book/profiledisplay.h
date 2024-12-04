@@ -24,8 +24,10 @@ private slots:
     void on_deleteBtn_clicked();
     void set_Contact_Profile_Details(QListWidgetItem item);
 
+
 signals:
-    void open_EditI_GUI(); //Opens edit info gui
+    void open_EditI_GUI(); //Opens edit info gui;
+
     void remove_Contact(const QString &name, const QString &number); //Used to remove contact
 
 private:

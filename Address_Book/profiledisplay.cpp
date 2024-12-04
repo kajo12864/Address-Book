@@ -6,10 +6,11 @@ profiledisplay::profiledisplay(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::profiledisplay)
 {
+    EditProfileInfoForm theForm;
     //Sends signal over to .h
     ui->setupUi(this);
     //Sends signal over to .h
-    connect(ui->editBtn, SIGNAL(clicked()), this, SLOT(on_editBtn_clicked()));
+    connect(ui->editBtn, SIGNAL(clicked()), this, SLOT(open_EditI_GUI()));
     connect(ui->deleteBtn, SIGNAL(clicked()), this, SLOT(on_deleteBtn_clicked()));
 }
 
@@ -21,6 +22,7 @@ profiledisplay::~profiledisplay()
 //Not Yet Implemented - Will Open Edit Info GUI
 void profiledisplay::on_editBtn_clicked()
 {
+    qDebug() << "Opening edit fields";
     emit this->open_EditI_GUI();
 }
 
@@ -57,6 +59,6 @@ void profiledisplay::on_deleteBtn_clicked()
     QString name = ui->lbl_name->text();
     QString number = ui->lbl_number->text();
     emit this->remove_Contact(name, number); //Sends a signal out to the Main Window to delete contact.
-    qDebug() << "Contact removed \n";
+    qDebug() << "Contact removed \n" << name;
 }
 
