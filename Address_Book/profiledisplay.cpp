@@ -61,10 +61,9 @@ void profiledisplay::on_deleteBtn_clicked()
 {
     //Not Yet Implemented
     QString name = ui->lbl_name->text();
-    QMainWindow mainw; //Needs to refer to the existing main window. This creates a new MainWindow.
+    //QMainWindow mainw; //Needs to refer to the existing main window. This creates a new MainWindow.
     QString number = ui->lbl_number->text();
-    QObject::connect(this,SIGNAL(remove_Contact(const QString &,const QString &)),&mainw,SLOT(remove_Contact(const QString &,const QString &)));
+
     emit this->remove_Contact(name, number); //Sends a signal out to the Main Window to delete contact.
-    qDebug() << "Contact removed \n" << name;
 }
 

@@ -75,7 +75,7 @@ void MainWindow::new_Contact_Info(const QIcon &icon, const QString &name, const 
 
 //Removing contacts
 void MainWindow::remove_Contact(const QString &given_name, const QString &given_number){
-    qDebug() << "Hi";
+    qDebug() << "Received remove contact request. Told to remove";
     qDebug() << given_name;
     QString re_contact_text = given_name; //Converts user name input to plain text
     QString re_contact_phone = given_number;
@@ -87,6 +87,7 @@ void MainWindow::remove_Contact(const QString &given_name, const QString &given_
         QString name = text_contents[0];
         QString number = text_contents[1];
         if(name == given_name && number == given_number){
+            qDebug() << "Found matching name & number";
             ui->listWidget->removeItemWidget(item);
             qDebug() << "Removed item successfully.";
         }
@@ -105,6 +106,8 @@ void MainWindow::profile_Display(QListWidgetItem item)
     win = new class profiledisplay;
     QObject::connect(this,SIGNAL(set_Contact_Profile_Details(const Contact &)), win,SLOT(set_Contact_Profile_Details(const Contact &)));
     win->show();
+    //For deleting contacts
+    QObject::connect(win,SIGNAL(remove_Contact(const QString &,const QString &)),this,SLOT(remove_Contact(const QString &,const QString &)));
     QString text = item.text();
     QStringList text_contents = text.split('\n');
     QString name = text_contents[0];
