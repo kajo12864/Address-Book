@@ -92,7 +92,6 @@ void NecessaryInfoForm::on_buttonConfirm_clicked()
         //reset inputs
         ui->lineName->clear();
         ui->lineNumber->clear();
-        ui->image_label->clear();
     }
 }
 
